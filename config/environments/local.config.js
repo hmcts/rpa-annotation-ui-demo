@@ -6,7 +6,7 @@ module.exports = {
         idam_api: 'https://preprod-idamapi.reform.hmcts.net:3511',
         idam_web: 'http://idam.preprod.ccidam.reform.hmcts.net',
         s2s: 'http://localhost:4502',
-        dm_store_api: 'http://dm-store-aat.service.core-compute-aat.internal',
+        dm_store_api: 'http://localhost:4603',
         em_anno_api: 'http://localhost:8080',
     },
     useProxy: false,

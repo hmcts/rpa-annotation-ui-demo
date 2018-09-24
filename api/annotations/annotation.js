@@ -5,7 +5,7 @@ const generateRequest = require('../lib/request');
 
 function getAnnotionSet(uuid, options) {
     console.log(options);
-    return generateRequest('GET', `${config.services.em_anno_api}/api/rectangles/${uuid}`, options);
+    return generateRequest('GET', `${config.services.em_anno_api}/api/annotation-sets/filter?documentId=${uuid}`, options);
 }
 
 function getAnnotionHealth(options) {
@@ -30,7 +30,8 @@ module.exports = app => {
     const router = express.Router({ mergeParams: true });
     app.use('/annotations', router);
 
-    router.get('/annotations-set/:uuid', (req, res, next) => {
+    router.get('/annotation-sets/:uuid', (req, res, next) => {
+        console.log(req);
         const uuid = req.params.uuid;
         const options = getOptions(req);
 

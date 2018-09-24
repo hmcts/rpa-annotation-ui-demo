@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AnnotationUiLibModule, ViewerComponent} from 'hmcts-annotation-ui-lib';
 import { Routes, RouterModule } from '@angular/router';
-import { LineComponent } from './line/line.component';
-
 const appRoutes: Routes = [
   { path: '',  component: ViewerComponent }
 ];
@@ -12,8 +10,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LineComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

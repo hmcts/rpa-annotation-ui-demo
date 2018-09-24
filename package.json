@@ -30,6 +30,7 @@
     "express": "^4.16.3",
     "hmcts-annotation-ui-lib": "file:../pdf-viewer-module/annotation-ui/dist/annotation-ui-lib/hmcts-annotation-ui-lib-0.0.3.tgz",
     "jwt-decode": "^2.2.0",
+    "ngx-cookie": "^4.0.2",
     "ngx-scroll-event": "^1.0.8",
     "node": "^10.11.0",
     "otp": "^0.1.3",

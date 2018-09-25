@@ -9,11 +9,6 @@ module.exports = (req, res, next) => {
     const now = new Date().getTime() / 1000;
     const expired = expires < now;
 
-    console.log(jwt);
-    console.log(jwtData);
-    console.log(expires);
-    console.log(now);
-
     if (expired) {
         res.status(401).send('Token expired!');
     } else {

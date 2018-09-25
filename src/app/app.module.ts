@@ -1,10 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, TransferState } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
-
+import { ConfigService } from './config.service';
 import { AppComponent } from './app.component';
 import { AnnotationUiLibModule, ViewerComponent} from 'hmcts-annotation-ui-lib';
+import { AuthModule } from './auth/auth.module';
 
 const appRoutes: Routes = [
   { path: '',  component: ViewerComponent }
@@ -21,9 +22,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     ),
-    HttpClientModule
+    HttpClientModule,
+    AuthModule
   ],
-  providers: [],
+  providers: [ConfigService, TransferState],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

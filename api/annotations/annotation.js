@@ -4,7 +4,7 @@ const generateRequest = require('../lib/request');
 
 
 function getAnnotionSet(uuid, options) {
-    console.log(options);
+    // console.log(options);
     return generateRequest('GET', `${config.services.em_anno_api}/api/annotation-sets/filter?documentId=${uuid}`, options);
 }
 
@@ -28,10 +28,9 @@ function getOptions(req) {
 
 module.exports = app => {
     const router = express.Router({ mergeParams: true });
-    app.use('/annotations', router);
+    app.use('/annotation', router);
 
     router.get('/annotation-sets/:uuid', (req, res, next) => {
-        console.log(req);
         const uuid = req.params.uuid;
         const options = getOptions(req);
 
@@ -42,7 +41,6 @@ module.exports = app => {
                 res.status(200).send(JSON.stringify(response));
             })
             .catch(response => {
-                console.log(response.error || response);
                 res.status(response.error.status).send(response.error.message);
             });
     });
@@ -57,7 +55,6 @@ module.exports = app => {
                 res.status(200).send(JSON.stringify(response));
             })
             .catch(response => {
-                console.log(response.error || response);
                 res.status(response.error.status).send(response.error.message);
             });
     });
@@ -71,7 +68,6 @@ module.exports = app => {
                 res.status(200).send(JSON.stringify(response));
             })
             .catch(response => {
-                console.log(response.error || response);
                 res.status(response.error.status).send(response.error.message);
             });
     });

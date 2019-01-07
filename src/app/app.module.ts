@@ -4,12 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { ConfigService } from './config.service';
 import { AppComponent } from './app.component';
-import { AnnotationUiLibModule, ViewerComponent} from 'hmcts-annotation-ui-lib';
+import { HmctsEmViewerUiModule} from 'hmcts-annotation-ui-lib';
 import { AuthModule } from './auth/auth.module';
 
-const appRoutes: Routes = [
-  { path: '',  component: ViewerComponent }
-];
+// const appRoutes: Routes = [
+//   { path: '',  component: ViewerComponent }
+// ];
 
 
 @NgModule({
@@ -18,10 +18,10 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AnnotationUiLibModule,
-    RouterModule.forRoot(
-      appRoutes
-    ),
+    HmctsEmViewerUiModule,
+    // RouterModule.forRoot(
+    //   appRoutes
+    // ),
     HttpClientModule,
     AuthModule
   ],

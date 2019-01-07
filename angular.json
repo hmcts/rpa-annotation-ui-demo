@@ -23,13 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/hmcts-annotation-ui-lib/assets/_theme.scss",
+              "node_modules/hmcts-annotation-ui-lib/assets/annotation-ui-theme.scss",
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/hmcts-annotation-ui-lib/assets/shared/pdf.js",
-              "node_modules/hmcts-annotation-ui-lib/assets/shared/pdf_viewer.js",
-              "node_modules/hmcts-annotation-ui-lib/assets/shared/pdf-annotate.js"
+              "node_modules/hmcts-annotation-ui-lib/assets/javascripts/pdf.js",
+              "node_modules/hmcts-annotation-ui-lib/assets/javascripts/pdf_viewer.js",
+              "node_modules/hmcts-annotation-ui-lib/assets/javascripts/pdf-annotate.js"
             ]
           },
           "configurations": {

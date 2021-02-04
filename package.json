@@ -25,7 +25,7 @@
     "@angular/router": "^6.1.8",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
-    "core-js": "^2.5.4",
+    "core-js": "^2.6.12",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "hmcts-annotation-ui-lib": "file:../pdf-viewer-module/annotation-ui/dist/annotation-ui-lib/hmcts-annotation-ui-lib-0.0.3.tgz",
